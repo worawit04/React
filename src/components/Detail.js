@@ -13,11 +13,10 @@ class Detail extends Component{
 
     componentDidMount(){
         const {match: {params} } = this.props
-        fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
+        fetch(`https://agile-cliffs-83142.herokuapp.com/api/news/${params.postId}`)
         .then(response => response.json())
-        .then(newtest => { this.setState({news: newtest})});
+        .then(newtest => { this.setState({news: newtest[0]})});
     }
-
     render() {
         return (
             <div>
@@ -29,9 +28,6 @@ class Detail extends Component{
         </div>
 
         )
-
     }
-
-
 } 
 export default Detail;

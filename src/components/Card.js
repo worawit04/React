@@ -1,5 +1,5 @@
 import React from 'react';
-const Card = ({id , titles , bodys }) => {
+const Card = ({id , titles , details }) => {
     // Props ที่ได้มาจาก Cardlist 3 ตัว นำมาแสดงผลในหน้า Card
     return (
         <div>
@@ -15,7 +15,7 @@ const Card = ({id , titles , bodys }) => {
                             {/* ค่าจาก Props ของ titles */}
                             
                         <p className="f6 f5-l lh-copy">
-                            {bodys}
+                            {details}
                              {/* ค่าจาก Props ของ bodys */}
                         </p>
                         <p className="f6 lh-copy mv0">By Robin Darnell</p>

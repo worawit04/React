@@ -37,3 +37,22 @@
 .bg-black1 {
   background-color: #2ca8ea;
 }
+small.f6.db.tc {
+  color: white;
+  padding-top: 20px;
+}
+.tc.mt3 a {
+  color: white;
+}
+
+form.ui.form {
+  width: 30%;
+  margin: 20px auto;
+}
+
+form.ui.form h1 {
+  text-align: center;
+}
+.buttonform {
+    text-align: center;
+}

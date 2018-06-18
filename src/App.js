@@ -12,7 +12,7 @@ class  App extends Component {
       }
     }
   componentDidMount(){
-      fetch('https://jsonplaceholder.typicode.com/posts')
+      fetch('https://agile-cliffs-83142.herokuapp.com/api/news')
       .then(response => response.json())
       .then(newtest => { this.setState({news: newtest})}); // news Setstate เพื่อเอา  News เท่ากับ APIชื่อ newtest
   }
@@ -25,7 +25,7 @@ class  App extends Component {
            {/* เอาค่าจาก Statel คือ News ส่งไปใน Cardlist โดยชื่อว่า addnews */}
           </div>
         <Footer/>      
-    </div>
+      </div>
     )
   }
 }

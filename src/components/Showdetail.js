@@ -6,7 +6,7 @@ const Showdetail = ( {show} ) => {
             
             <div>
                  <h2>{show.title}</h2>
-                 <p>{show.body}</p>
+                 <p>{show.detail}</p>
             </div> 
 
         </div>          
