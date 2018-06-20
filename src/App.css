@@ -35,7 +35,7 @@
 }
 
 .bg-black1 {
-  background-color: #2ca8ea;
+  background-color: #0c3348;
 }
 small.f6.db.tc {
   color: white;
@@ -55,4 +55,40 @@ form.ui.form h1 {
 }
 .buttonform {
     text-align: center;
+}
+.buttonform.addnews {
+  margin-top: 27px;
+}
+.buttonform.register {
+  margin-top: 30px;
+}
+h2.titledetail {
+  margin: 30px;
+}
+.min-height{
+  min-height: 77vh;
+}
+p.detail {
+  margin-top: 50px;
+}
+
+.btn-login{
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+form.ui.form {
+  width: 30%;
+  margin: 20px auto;
+  /* margin-top: 2%; */
+}
+.btn-register {
+  display: inline-flex;
+  margin-top: 20px;
+}
+
+.button-Dashboard {
+  float: right;
 }

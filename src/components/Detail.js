@@ -10,7 +10,6 @@ class Detail extends Component{
             news: []
         }
     }
-
     componentDidMount(){
         const {match: {params} } = this.props
         fetch(`https://agile-cliffs-83142.herokuapp.com/api/news/${params.postId}`)
@@ -20,12 +19,12 @@ class Detail extends Component{
     render() {
         return (
             <div>
-            <Navbar/>    
-             <div className ="container">        
-               <Showdetail show = {this.state.news}/>
-              </div>
-            <Footer/>      
-        </div>
+                <Navbar/>    
+                    <div className ="Container">        
+                        <Showdetail show = {this.state.news}/>
+                    </div>
+                <Footer/>      
+            </div>
 
         )
     }

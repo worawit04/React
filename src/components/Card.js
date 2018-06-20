@@ -1,5 +1,6 @@
 import React from 'react';
-const Card = ({id , titles , details }) => {
+import Btn from './Btn';
+const Card = ({id , titles , details,userId }) => {
     // Props ที่ได้มาจาก Cardlist 3 ตัว นำมาแสดงผลในหน้า Card
     return (
         <div>
@@ -18,10 +19,15 @@ const Card = ({id , titles , details }) => {
                             {details}
                              {/* ค่าจาก Props ของ bodys */}
                         </p>
-                        <p className="f6 lh-copy mv0">By Robin Darnell</p>
+                        <p className="f6 lh-copy mv0">By Robin Darnell</p>               
                         </div>
                     </div>
                     </a>
+           
+                    <div className="ui grid">
+                        <div className="eight wide column"></div>
+                        <div className="eight wide column"> <Btn Btn_id = { id } userId={userId}/> </div>
+                    </div>
                 </article>
         </div>         
     );

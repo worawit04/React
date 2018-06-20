@@ -20,9 +20,9 @@ class  App extends Component {
     return ( 
       <div>
         <Navbar/>    
-         <div className ="container">
+         <div className ="Container">
            <Cardlist addnews = {this.state.news}/> 
-           {/* เอาค่าจาก Statel คือ News ส่งไปใน Cardlist โดยชื่อว่า addnews */}
+           {/* เอาค่าจาก State คือ News ส่งไปใน Cardlist โดยชื่อว่า addnews */}
           </div>
         <Footer/>      
       </div>
