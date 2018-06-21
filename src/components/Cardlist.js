@@ -6,10 +6,10 @@ const Cardlist = ({addnews}) => {
         <div>
             <div className="container">
                 <section className="mw7 center avenir">
+                    <div className="ui container">
+                         <h2 className="baskerville fw1 ph3 ph0-l ">News</h2>
+                    </div>
                     <div className="min-height"> 
-                        <div> 
-                              <h1 className="">News</h1>
-                        </div> 
                             { 
                                 addnews.map((paper, i) =>{
                                     // paper ก็คือข้อมูล 1 ชุดของ Array i คือ key
@@ -20,7 +20,6 @@ const Cardlist = ({addnews}) => {
                                     titles = {paper.title } 
                                     details = {paper.detail}
                                     userId = {paper.user}
-                                    
                                     />
                                     // หลังจากนั้น วนค่าโดยไปเก็บไว้ เช่น  titles = { paper.title } เพื่อที่จะส่งต่อค่า props ไปให้ Card แสดงผล
                                     )   

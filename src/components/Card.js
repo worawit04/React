@@ -4,8 +4,9 @@ const Card = ({id , titles , details,userId }) => {
     // Props ที่ได้มาจาก Cardlist 3 ตัว นำมาแสดงผลในหน้า Card
     return (
         <div>
+            
              <article className="bb b--black-10">
-                    <a className="db pv4 ph3 ph0-l no-underline black dim" href= {`/detail/${id}`} >
+                    <a className="db pv2 ph3 ph0-l no-underline black dim" href= {`/detail/${id}`} >
                     <div className="flex flex-column flex-row-ns">
                         <div className="pr3-ns mb4 mb0-ns w-100 w-40-ns">
                             <img alt="Photo" src={`https://robohash.org/${id}?size=200x200&set=set2`}  className="db" alt="Photo of a whale's tale coming crashing out of the water."/>
@@ -25,8 +26,7 @@ const Card = ({id , titles , details,userId }) => {
                     </a>
            
                     <div className="ui grid">
-                        <div className="eight wide column"></div>
-                        <div className="eight wide column"> <Btn Btn_id = { id } userId={userId}/> </div>
+                        <div class="sixteen wide column"><Btn Btn_id = { id } userId={userId}/> </div>
                     </div>
                 </article>
         </div>         

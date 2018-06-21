@@ -71,7 +71,6 @@ h2.titledetail {
 p.detail {
   margin-top: 50px;
 }
-
 .btn-login{
     padding: 14px 20px;
     margin: 8px 0;
@@ -80,7 +79,7 @@ p.detail {
     width: 100%;
 }
 form.ui.form {
-  width: 30%;
+  width: 300px;
   margin: 20px auto;
   /* margin-top: 2%; */
 }
@@ -88,7 +87,36 @@ form.ui.form {
   display: inline-flex;
   margin-top: 20px;
 }
-
 .button-Dashboard {
   float: right;
+}
+h2.baskerville.fw1.ph3.ph0-l {
+  margin-top: 27px;
+}
+form.ui.large.form.login {
+  padding: 20px;
+  background: #e7e7e7;
+}
+.ui.form.login {
+  padding-top: 5%;
+}
+.modal-dialog {
+ 
+          width: 360px;
+ 
+        }
+ 
+.modal-header {
+ 
+    background-color: #337AB7;
+ 
+    padding:16px 16px;
+ 
+    color:#FFF;
+ 
+    border-bottom:2px dashed #337AB7;
+ 
+ }
+ .styles_modal__gNwvD {
+  min-width: 408px;
 }

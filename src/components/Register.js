@@ -1,9 +1,25 @@
 import React, { Component }from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Modal from 'react-responsive-modal';
 
 class Register extends Component {
+    constructor(){
+        super();
+        this.state = {
+          openConfirmModal: false,
+          openAlertModal: false,
+          confirmText: '',
+          alerText: ''
+        }
+        this.onOpenConfirmModal = this.onOpenConfirmModal.bind(this);
+        this.onCloseConfirmModal = this.onCloseConfirmModal.bind(this);
+        this.onOpenAlert = this.onOpenAlert.bind(this);
+        this.onCloseAlert = this.onCloseAlert.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
     onSubmit (event) {
+        this.setState({ openConfirmModal: false });
         var data =  new FormData(document.querySelector('form'));
         fetch('https://agile-cliffs-83142.herokuapp.com/api/user', {
         method: 'POST',
@@ -18,9 +34,36 @@ class Register extends Component {
         }
       })
       .then(response => response.json())
-      .then(json => console.log(json))
+      .then(json => {
+        if(!json.require){
+          this.setState({ openAlertModal: true, alerText: 'Success'});
+          window.location.href = "/login";
+        }else{
+          this.setState({ openAlertModal: true, alerText: 'Please fill user information'});
+          // alert("please fill user information");
+        }
+      })
     }
+
+    onOpenConfirmModal(){
+        this.setState({ openConfirmModal: true, confirmText: 'You want to register ?' });
+      }
+    
+      onCloseConfirmModal(){
+        this.setState({ openConfirmModal: false });
+      }
+    
+      onOpenAlert(){
+        this.setState({ openAlertModal: true });
+      }
+    
+      onCloseAlert(){
+        this.setState({ openAlertModal: false });
+      }
+    
+
     render(){
+        const { openConfirmModal,openAlertModal,confirmText,alerText } = this.state;
         return(
             <div>
                 <Navbar/> 
@@ -48,12 +91,23 @@ class Register extends Component {
                             <input type="password" name="repassword" id = "repassword" placeholder="Re Password"/>
                         </div>
                         <div className="buttonform register">
-                            <a className="ui green button" onClick={this.onSubmit} >REGISTER</a>
+                            <a className="ui green button" onClick={this.onOpenConfirmModal}>REGISTER</a>
                             <a className="ui red button">CANCEL</a>
                         </div> 
                       </form>
                    </div>
                <Footer/> 
+               <Modal open={openConfirmModal} onClose={this.onCloseConfirmModal} center>
+                    <h2>Confirm</h2>
+                    <p>{confirmText}</p>
+                    <a className="ui green button">  Yes </a>
+                </Modal>
+                <Modal open={openAlertModal} onClose={this.onCloseAlert} center>
+                    <p>Alert</p>
+                    <div className="fixed-modal">
+                        <p>{alerText}</p>
+                    </div>
+                </Modal>
             </div>
         )
     }
