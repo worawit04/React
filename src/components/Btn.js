@@ -57,7 +57,7 @@ class Btn extends Component{
             <div className="button-Dashboard">
             <a className="ui blue button new" href={`/edit/${this.state.id}`}><i className="fas fa-edit fa-sm"></i>&nbsp; Edit</a>
             <a className="ui red button new" onClick={ this.onOpenConfirmModal }><i className="fas fa-trash-alt fa-sm"></i>&nbsp;&nbsp; Delete</a>
-                <Modal open={openConfirmModal} onClose={this.onCloseConfirmModal} center classNames="modalall">
+                <Modal open={openConfirmModal} onClose={this.onCloseConfirmModal} center className="modalall">
                     <h2>Confirm</h2>
                     <p>{confirmText}</p>
                     <a className="ui red button new" onClick={this.btn_delete} > Yes!!</a>
@@ -65,12 +65,13 @@ class Btn extends Component{
                 <Modal open={openAlertModal} onClose={this.onCloseAlert} center>
                     <p>Alert</p>
                     <div className="fixed-modal">
-                        <p>{alerText}</p>
+                    <p>{alerText}</p>
                     </div>
                 </Modal>
             </div> 
         )
-         }else{
+        }else{
+          
         return('')
       }
     }

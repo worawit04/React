@@ -3,7 +3,6 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Cardlist from './components/Cardlist'
-
 class  App extends Component { 
   constructor(){
       super()

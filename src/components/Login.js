@@ -4,7 +4,6 @@ import Footer from './Footer';
 import Modal from 'react-responsive-modal';
 
 class Login extends Component {
-
     constructor(){
         super()
         this.state = {
@@ -75,7 +74,7 @@ class Login extends Component {
                                         <Modal open={open} onClose={this.onCloseAlert} center>
                                          <h2>Alert Warning!!</h2>
                                          <p>Please input Username and Password </p>
-                                        <button class="ui yellow button"> Yes </button>
+                                        <button className="ui yellow button"> Yes </button>
                                         </Modal>
                                 </div>
                                 <div className="btn-register">

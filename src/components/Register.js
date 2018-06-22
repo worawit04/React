@@ -32,9 +32,9 @@ class Register extends Component {
         headers: {
           "Content-type": "application/json; charset=UTF-8"
         }
-      })
-      .then(response => response.json())
-      .then(json => {
+        })
+        .then(response => response.json())
+        .then(json => {
         if(!json.require){
           this.setState({ openAlertModal: true, alerText: 'Success'});
           window.location.href = "/login";
@@ -44,7 +44,6 @@ class Register extends Component {
         }
       })
     }
-
     onOpenConfirmModal(){
         this.setState({ openConfirmModal: true, confirmText: 'You want to register ?' });
       }
@@ -60,7 +59,6 @@ class Register extends Component {
       onCloseAlert(){
         this.setState({ openAlertModal: false });
       }
-    
 
     render(){
         const { openConfirmModal,openAlertModal,confirmText,alerText } = this.state;
@@ -100,7 +98,7 @@ class Register extends Component {
                <Modal open={openConfirmModal} onClose={this.onCloseConfirmModal} center>
                     <h2>Confirm</h2>
                     <p>{confirmText}</p>
-                    <a className="ui green button">  Yes </a>
+                    <a className="ui green button" onClick={this.onSubmit}> Yes </a>
                 </Modal>
                 <Modal open={openAlertModal} onClose={this.onCloseAlert} center>
                     <p>Alert</p>

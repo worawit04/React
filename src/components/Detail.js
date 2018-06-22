@@ -25,7 +25,6 @@ class Detail extends Component{
                     </div>
                 <Footer/>      
             </div>
-
         )
     }
 } 

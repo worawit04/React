@@ -20,20 +20,16 @@ class Addnews extends Component {
     }
     onOpenConfirmModal(){
         this.setState({ openConfirmModal: true, confirmText: 'You want to Addnew ?' });
-      }
-    
-      onCloseConfirmModal(){
+    }
+    onCloseConfirmModal(){
         this.setState({ openConfirmModal: false });
-      }
-    
-      onOpenAlert(){
+    }
+    onOpenAlert(){
         this.setState({ openAlertModal: true });
-      }
-    
-      onCloseAlert(){
+    }
+    onCloseAlert(){
         this.setState({ openAlertModal: false });
-      }
-    
+    }
     onSubmit (event) {
         const userId = JSON.parse(localStorage.getItem("userId"))
         var data =  new FormData(document.querySelector('form'));
@@ -47,17 +43,17 @@ class Addnews extends Component {
         headers: {
           "Content-type": "application/json; charset=UTF-8"
         }
-    })
-      .then(response => response.json())
-      .then(json => {
-        if(!json.require){
-          this.setState({ openAlertModal: true, alerText: 'Success'});
-          window.location.href = "/dashboard";
-        }else{
-          this.setState({ openAlertModal: true, alerText: '์Not Success'});
-          // alert("please fill user information");
-        }
-      })
+        })
+        .then(response => response.json())
+        .then(json => {
+            if(!json.require){
+            this.setState({ openAlertModal: true, alerText: 'Success'});
+            window.location.href = "/dashboard";
+            }else{
+            this.setState({ openAlertModal: true, alerText: '์Not Success'});
+            // alert("please fill user information");
+            }
+        })
     }
     render(){
         const { openConfirmModal,openAlertModal,confirmText,alerText } = this.state;
@@ -82,9 +78,8 @@ class Addnews extends Component {
                     </form>
                </div>
                <Footer/>
-               
                <Modal open={openConfirmModal} onClose={this.onCloseConfirmModal} center>
-                    <p>Confirm</p>
+                    <h2>Confirm</h2>
                     <p>{confirmText}</p>
                     <button className="ui green button" onClick={this.onSubmit}>
                         Yes

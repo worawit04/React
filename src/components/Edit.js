@@ -97,14 +97,14 @@ class Edit extends Component {
                </div>
                <Footer/> 
                <Modal open={openConfirmModal} onClose={this.onCloseConfirmModal} center>
-                    <p>Confirm</p>
+                    <h2>Confirm</h2>
                     <p>{confirmText}</p>
                     <button className="ui green button" onClick={this.onSave}>
                         Yes
                     </button>
                 </Modal>
                 <Modal open={openAlertModal} onClose={this.onCloseAlert} center>
-                    <p>Alert</p>
+                    <h2>Alert</h2>
                     <div className="fixed-modal">
                         <p>{alerText}</p>
                     </div>
