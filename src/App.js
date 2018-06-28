@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Cardlist from './components/Cardlist'
+import logo from './components/logo.png';
 class  App extends Component { 
   constructor(){
       super()
@@ -17,14 +18,13 @@ class  App extends Component {
   }
   render(){
     return ( 
-      <div>
-        <Navbar/>    
-         <div className ="Container">
-           <Cardlist addnews = {this.state.news}/> 
-           {/* เอาค่าจาก State คือ News ส่งไปใน Cardlist โดยชื่อว่า addnews */}
-          </div>
-        <Footer/>      
-      </div>
+        <div>
+          <Navbar/>    
+          <div className ="Container">
+            <Cardlist addnews = {this.state.news}/> 
+            </div>
+          <Footer/>    
+        </div>   
     )
   }
 }
